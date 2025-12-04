@@ -1,0 +1,17 @@
+# Include top-level docs
+include README.md
+include LICENSE
+
+# Include environment/sample config files if you have them
+include .env.example
+include .flaskenv
+
+# Include any templates and static files
+recursive-include tuition_estimator/templates *.html
+recursive-include tuition_estimator/static *
+recursive-include tuition_estimator/assets *
+
+# Exclude common junk
+exclude *.pyc
+exclude *.pyo
+exclude __pycache__/
