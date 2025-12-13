@@ -47,7 +47,14 @@
       <div class="main-content-container">
         <div class="learner-info-container">
           <div class="learner-info-header-container">
-            <p class="learner-info-header-text">Learner Information</p>
+            <div class="learner-info-header-logo-container">
+              <img
+                src="{{ url_for('static', filename='icons/users.svg') }}"
+                alt="Calculator icon"
+                class="icon"
+              />
+              <p class="learner-info-header-text">Learner Information</p>
+            </div>
             <p class="learner-info-header-text">
               Select your learner type and current location to calculate
               accurate costs
@@ -97,7 +104,16 @@
             </div>
 
             <div class="learner-info-select-container">
-              <p class="learner-info-select-text">Current Physical Location</p>
+              <div class="learner-info-select-icon-container">
+                <img
+                  src="{{ url_for('static', filename='icons/map-pin.svg') }}"
+                  alt="Calculator icon"
+                  class="icon"
+                />
+                <p class="learner-info-select-text">
+                  Current Physical Location
+                </p>
+              </div>
               <form method="post">
                 <label class="learner-info-option">
                   <input

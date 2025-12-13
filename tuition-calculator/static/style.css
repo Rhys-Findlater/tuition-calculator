@@ -32,7 +32,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .main-content-container {
@@ -79,7 +78,7 @@ main {
 /* ==================== Welcome-section ==================== */
 
 .welcome-section-container {
-  box-shadow: 8px 8px 20px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
   padding: 1.5rem;
@@ -98,7 +97,8 @@ main {
 /* ==================== Learner-info ==================== */
 
 .learner-info-container {
-  box-shadow: 8px 8px 20px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -112,6 +112,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.09rem;
+}
+
+.learner-info-header-logo-container {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .learner-info-header-text {
@@ -132,6 +137,11 @@ main {
   gap: 0.5rem;
 }
 
+.learner-info-select-icon-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
 .learner-info-select-text {
   font-size: 0.875rem;
 }
@@ -139,7 +149,7 @@ main {
 .learner-info-option {
   font-size: 0.875rem;
   padding: 16px 20px;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e5e7eb;
   border-radius: 10px;
   margin-bottom: 0.75rem;
   cursor: pointer;
