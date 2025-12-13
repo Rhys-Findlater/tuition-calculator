@@ -29,7 +29,6 @@
             <img
               src="{{ url_for('static', filename='icons/calculator.svg') }}"
               alt="Calculator icon"
-              class="icon"
             />
           </div>
           <p class="welcome-title">
@@ -50,8 +49,7 @@
             <div class="learner-info-header-logo-container">
               <img
                 src="{{ url_for('static', filename='icons/users.svg') }}"
-                alt="Calculator icon"
-                class="icon"
+                alt="Person icon"
               />
               <p class="learner-info-header-text">Learner Information</p>
             </div>
@@ -63,8 +61,14 @@
 
           <div class="learner-info-selection-container">
             <div class="learner-info-select-container">
-              <p class="learner-info-select-text">Learner Type</p>
-
+              <div class="learner-info-select-icon-container">
+                <img
+                  src="{{ url_for('static', filename='icons/graduation-cap.svg') }}"
+                  alt="Graduation cap icon"
+                  class="sub-icon"
+                />
+                <p class="learner-info-select-text">Learner Type</p>
+              </div>
               <form method="post">
                 <div class="learner-info-label-container">
                   <label class="learner-info-option">
@@ -106,9 +110,9 @@
             <div class="learner-info-select-container">
               <div class="learner-info-select-icon-container">
                 <img
-                  src="{{ url_for('static', filename='icons/map-pin.svg') }}"
-                  alt="Calculator icon"
-                  class="icon"
+                  src="{{ url_for('static', filename='icons/map-pin-black.svg') }}"
+                  alt="Location pin icon"
+                  class="sub-icon"
                 />
                 <p class="learner-info-select-text">
                   Current Physical Location
