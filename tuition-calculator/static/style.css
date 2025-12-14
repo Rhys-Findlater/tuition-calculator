@@ -38,6 +38,7 @@ main {
 .main-content-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
 }
 
 .sub-icon {
@@ -62,11 +63,12 @@ main {
 .header-subcontainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   order: 2;
 }
 
 .header-text {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   color: white;
 }
@@ -88,6 +90,7 @@ main {
   border: 1px solid #e5e7eb;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .welcome-content {
@@ -97,7 +100,7 @@ main {
 }
 
 .welcome-text-block {
-  max-width: 60rem;      /* lets text wrap nicely */
+  max-width: 60rem; /* lets text wrap nicely */
 }
 .welcome-title {
   font-size: 1rem;
@@ -116,6 +119,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-bottom: 1.75rem;
   grid-column: span 2 / span 2;
 }
 
@@ -179,13 +183,44 @@ main {
   flex-direction: column;
 }
 
+/* ==================== Cost Breakdown ==================== */
+
+.cost-summary-container {
+  padding: 1.5rem;
+  height: 40%;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-summary-header-container {
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.cost-summary-header {
+  font-size: 1rem;
+}
+
+.cost-summary-idle-container {
+  text-align: center;
+}
+
+.cost-summary-icon {
+  width: 3rem;
+  margin-bottom: 0.5rem;
+}
+
 /* ==================== Footer ==================== */
 
 .footer {
   width: 100vw;
   text-align: center;
   background: #212121;
-  padding: 1.5rem 10rem;
+  padding: 2.5rem 10rem;
 }
 
 .footer-text {
