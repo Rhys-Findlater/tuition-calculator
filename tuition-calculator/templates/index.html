@@ -25,11 +25,8 @@
       <div class="welcome-section-container">
         <div class="welcome-content">
           <div class="welcome-content-icon-container">
-            <img
-              src="{{ url_for('static', filename='icons/calculator.svg') }}"
-              alt="Calculator icon"
-              class="main-icon"
-            />
+            <img src="{{ url_for('static', filename='icons/calculator.svg') }}"
+            alt="Calculator icon" class="main-icon" />
             <p class="welcome-title">
               Welcome to the UC Online Tuition Calculator
             </p>
@@ -176,7 +173,7 @@
         </div>
         <div class="course-selection-container">
           <div class="course-selection-heading-container">
-            <div class="course-selection-icon-container">
+            <div class="course-selection-heading-icon-container">
               <img
                 src="{{ url_for('static', filename='icons/book-open.svg') }}"
                 alt="Open book icon"
@@ -198,10 +195,95 @@
                 class="search-input"
                 name="q"
                 type="search"
-                placeholder="Search
-            by course code or name..."
+                placeholder="Search by course code or name..."
               />
             </form>
+          </div>
+          <div class="course-selection-degree-filter">
+            <button class="course-degree-filter course-degree-filter-active">All Faculties</p>
+            <button class="course-degree-filter">Arts</button>
+            <button class="course-degree-filter">Business</button>
+            <button class="course-degree-filter">Science</button>
+            <button class="course-degree-filter">Education</button>
+            <button class="course-degree-filter">Health Sciences</button>
+            <button class="course-degree-filter">Law</button>
+          </div>
+          <div class="course-selection-course-list">
+            <div class="course-selection-course">
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>ARTS101</p>
+                  <p class="course-selection-course-degree">Arts</p>
+                  <p class="course-selection-course-points">15 pts</p>
+                </div>
+                <p>Introduction to Art History</p>
+              </div>
+              <div class="course-selection-course-button-container">
+                <p>$892.50</p>
+                <button class="course-selection-course-button" type="button"><span class="course-selection-course-button-add">+</span><span>Add</span>
+                </button>
+              </div>
+            </div>
+            <div class="course-selection-course">
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>ENGL201</p>
+                  <p class="course-selection-course-degree">Arts</p>
+                  <p class="course-selection-course-points">15 pts</p>
+                </div>
+                <p>English Literature and Culture</p>
+              </div>
+              <div class="course-selection-course-button-container">
+                <p>$892.50</p>
+                <button class="course-selection-course-button" type="button"><span class="course-selection-course-button-add">+</span><span>Add</span>
+                </button>
+              </div>
+            </div>
+            <div class="course-selection-course">
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>HIST102</p>
+                  <p class="course-selection-course-degree">Arts</p>
+                  <p class="course-selection-course-points">15 pts</p>
+                </div>
+                <p>Modern World History</p>
+              </div>
+              <div class="course-selection-course-button-container">
+                <p>$892.50</p>
+                <button class="course-selection-course-button" type="button"><span class="course-selection-course-button-add">+</span><span>Add</span>
+                </button>
+              </div>
+            </div>
+            <div class="course-selection-course">
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>BSNS101</p>
+                  <p class="course-selection-course-degree">Business</p>
+                  <p class="course-selection-course-points">15 pts</p>
+                </div>
+                <p>Foundations of Business</p>
+              </div>
+              <div class="course-selection-course-button-container">
+                <p>$1050.00</p>
+                <button class="course-selection-course-button" type="button"><span class="course-selection-course-button-add">+</span><span>Add</span>
+                </button>
+              </div>
+            </div>
+            <div class="course-selection-course">
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>ECON104</p>
+                  <p class="course-selection-course-degree">Business</p>
+                  <p class="course-selection-course-points">15 pts</p>
+                </div>
+                <p>Introduction to Economics</p>
+              </div>
+              <div class="course-selection-course-button-container">
+                <p>$1050.00</p>
+                <button class="course-selection-course-button" type="button"><span class="course-selection-course-button-add">+</span><span>Add</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="ssl-container">
@@ -211,6 +293,7 @@
                 <img
                   src="{{ url_for('static', filename='icons/info.svg') }}"
                   alt="Information"
+                  class="main-icon"
                 />
               </div>
               <div>
@@ -293,7 +376,7 @@
 
     <footer class="footer">
       <p class="footer-text">
-        UC Online Course Costing Application | University of Canterbury
+        UC Online Course Costing Application | UC Online
       </p>
     </footer>
   </body>
