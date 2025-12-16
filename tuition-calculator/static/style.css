@@ -418,6 +418,10 @@ main {
   gap: 1rem;
 }
 
+.radio-button { 
+  accent-color: black;
+}
+
 .ssl-panel-onshore,
 .ssl-panel-offshore {
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.1);
