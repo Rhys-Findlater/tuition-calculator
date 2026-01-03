@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tuition Calculator</title>
-    <meta name="description" content="Calculate UC Online course costs with SSL & GST">
+    <meta
+      name="description"
+      content="Calculate UC Online course costs with SSL & GST"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -28,8 +36,11 @@
       <div class="welcome-section-container">
         <div class="welcome-content">
           <div class="welcome-content-icon-container">
-            <img src="{{ url_for('static', filename='icons/calculator.svg') }}"
-            alt="Calculator icon" class="main-icon" />
+            <img
+              src="{{ url_for('static', filename='icons/calculator.svg') }}"
+              alt="Calculator icon"
+              class="main-icon"
+            />
             <p class="welcome-title">
               Welcome to the UC Online Tuition Calculator
             </p>
@@ -200,13 +211,14 @@
                 Selected Courses (<span id="selectedCoursesCount">0</span>)
               </p>
 
-              <button 
+              <button
                 type="button"
                 class="selected-courses-clear"
                 id="clearSelectedCourses"
-                disabled>
+                disabled
+              >
                 <span class="selected-courses-clear-x">×</span>
-                Clear ALL  
+                Clear ALL
               </button>
             </div>
 
@@ -229,7 +241,9 @@
             </form>
           </div>
           <div class="course-selection-degree-filter">
-            <button class="course-degree-filter course-degree-filter-active">All Faculties</p>
+            <button class="course-degree-filter course-degree-filter-active">
+              All Faculties
+            </button>
             <button class="course-degree-filter">Arts</button>
             <button class="course-degree-filter">Business</button>
             <button class="course-degree-filter">Science</button>
@@ -239,30 +253,38 @@
           </div>
           <div class="course-selection-course-list">
             {% for course in courses %}
-              <div class="course-selection-course"
-                  data-course-code="{{ course.code }}"
-                  data-course-title="{{ course.title }}"
-                  data-course-points="{{ course.points }}"
-                  data-course-price="{{ course.price }}"
-                  data-course-faculty="{{ course.faculty }}">
-                <div class="course-selection-course-info-container">
-                  <div class="course-selection-course-code-container">
-                    <p>{{ course.code }}</p>
-                    <p class="course-selection-course-degree">{{ course.faculty }}</p>
-                    <p class="course-selection-course-points">{{ course.points }} pts</p>
-                  </div>
-                  <p>{{ course.title }}</p>
+            <div
+              class="course-selection-course"
+              data-course-code="{{ course.code }}"
+              data-course-title="{{ course.title }}"
+              data-course-points="{{ course.points }}"
+              data-course-price="{{ course.price }}"
+              data-course-faculty="{{ course.faculty }}"
+            >
+              <div class="course-selection-course-info-container">
+                <div class="course-selection-course-code-container">
+                  <p>{{ course.code }}</p>
+                  <p class="course-selection-course-degree">
+                    {{ course.faculty }}
+                  </p>
+                  <p class="course-selection-course-points">
+                    {{ course.points }} pts
+                  </p>
                 </div>
-                <div class="course-selection-course-button-container">
-                  <p>${{ "%.2f"|format(course.price) }}</p>
-                  <button class="course-selection-course-button"
-                          type="button"
-                          data-course-toggle>
-                    <span class="course-selection-course-button-add">+</span>
-                    <span class="course-selection-course-button-label">Add</span>
-                  </button>
-                </div>
+                <p>{{ course.title }}</p>
               </div>
+              <div class="course-selection-course-button-container">
+                <p>${{ "%.2f"|format(course.price) }}</p>
+                <button
+                  class="course-selection-course-button"
+                  type="button"
+                  data-course-toggle
+                >
+                  <span class="course-selection-course-button-add">+</span>
+                  <span class="course-selection-course-button-label">Add</span>
+                </button>
+              </div>
+            </div>
             {% endfor %}
           </div>
         </div>
